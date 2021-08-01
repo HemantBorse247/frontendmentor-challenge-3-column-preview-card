@@ -96,12 +96,32 @@
   border-style: none;
   font-size: var(--font-size-description);
   border: 1.5px solid var(--Transparent-white);
+  margin-top: 20px;
+}
+
+#suv .btn {
+  color: var(--Dark-cyan);
+}
+
+#suv .btn:hover {
+  color: var(--Transparent-white);
+  cursor: pointer;
+}
+
+#luxury .btn:hover {
+  color: var(--Transparent-white);
+  cursor: pointer;
+}
+
+#luxury .btn {
+  color: var(--Very-dark-cyan);
 }
 
 .btn:hover {
   background: none;
   border: 1.5px solid var(--Transparent-white);
   color: var(--Transparent-white);
+  cursor: pointer;
 }
 
 /* first (sedan) card section css */
