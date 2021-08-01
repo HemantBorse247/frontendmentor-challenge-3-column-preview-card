@@ -136,6 +136,8 @@
     background-color: var(--Transparent-white);
     padding: 80px 150px;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
   }
 
   .description {
