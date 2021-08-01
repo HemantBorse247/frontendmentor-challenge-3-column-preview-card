@@ -46,7 +46,7 @@
 .container {
   width: 100%;
   height: 100%;
-  background-color: #f2f2f2;
+  background-color: var(--Transparent-white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,18 +57,18 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 320px;
-  min-width: 280px;
+  width: auto;
+  max-width: var(--width-card-section-mobile);
 }
 
 .card-section {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  text-align: left;
-  padding: 40px;
-  height: var(--height-card-section-mobile);
+  height: auto;
   width: 100%;
+  padding: 40px;
+  text-align: left;
 }
 
 .vehicle-type {
@@ -76,6 +76,7 @@
   font-family: var(--font-fam-big);
   font-size: var(--font-size-heading);
   margin-bottom: 22px;
+  margin-top: 20px;
 }
 
 .description {
@@ -97,6 +98,7 @@
   font-size: var(--font-size-description);
   border: 1.5px solid var(--Transparent-white);
   margin-top: 20px;
+  transition: all 200ms ease-in;
 }
 
 #suv .btn {
@@ -141,10 +143,18 @@
 }
 
 @media screen and (min-width: 750px) {
+  .container {
+    background-color: var(--Transparent-white);
+    padding: 80px 150px;
+    height: 100%;
+    width: 100%;
+  }
+
   .card {
     flex-direction: row;
     width: 100%;
     height: 100%;
+    min-width: 900px;
   }
 
   .card-section {
@@ -152,17 +162,20 @@
     height: 100%;
   }
 
-  .container {
-    background-color: var(--Transparent-white);
-    padding: 80px 150px;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-  }
-
   .description {
     margin-bottom: 60px;
   }
+
+  /* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    display: flex;
+    margin: 0px auto;
+    flex-direction: row;
+  } */
 
   #sedan {
     background-color: var(--bright-orange);
