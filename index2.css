@@ -56,8 +56,9 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: var(--width-card-section-mobile);
   height: 100%;
+  max-width: 320px;
+  min-width: 280px;
 }
 
 .card-section {
@@ -67,8 +68,7 @@
   text-align: left;
   padding: 40px;
   height: var(--height-card-section-mobile);
-  max-width: 320px;
-  min-width: 280px;
+  width: 100%;
 }
 
 .vehicle-type {
