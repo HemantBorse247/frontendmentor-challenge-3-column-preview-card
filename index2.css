@@ -1,0 +1,158 @@
+/* importing fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+/* css reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* variables */
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+
+  --maxwidht-mobile: 350px;
+  --maxwidth-desktop: 1440px;
+  --width-card-section-mobile: 350px;
+  --height-card-section-mobile: 400px;
+
+  --font-fam-lex: "Lexend Deca";
+  --font-fam-big: "big shoulders display";
+
+  --font-size-heading: 34px;
+  --font-size-description: 13px;
+}
+/* helper classes */
+
+.margin-bottom-mobile {
+  margin-bottom: 20px;
+}
+
+.margin-bottom-desription {
+  margin-bottom: 24px;
+}
+
+/* actual css starts here */
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 85px 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: var(--width-card-section-mobile);
+  height: 100%;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  padding: 40px;
+  height: var(--height-card-section-mobile);
+  max-width: 320px;
+  min-width: 280px;
+}
+
+.vehicle-type {
+  color: var(--Very-light-gray);
+  font-family: var(--font-fam-big);
+  font-size: var(--font-size-heading);
+  margin-bottom: 22px;
+}
+
+.description {
+  color: var(--Transparent-white);
+  font-family: var(--font-fam-lex);
+  font-size: var(--font-size-description);
+  line-height: 22.8px;
+  width: 206px;
+}
+
+.btn {
+  border-radius: 30px;
+  background-color: var(--Very-light-gray);
+  padding: 10px 28px;
+  text-align: center;
+  font-family: var(--font-fam-lex);
+  color: var(--bright-orange);
+  border-style: none;
+  font-size: var(--font-size-description);
+  border: 1.5px solid var(--Transparent-white);
+}
+
+.btn:hover {
+  background: none;
+  border: 1.5px solid var(--Transparent-white);
+  color: var(--Transparent-white);
+}
+
+/* first (sedan) card section css */
+
+#sedan {
+  background-color: var(--bright-orange);
+  border-radius: 8px 8px 0 0;
+}
+
+#suv {
+  background-color: var(--Dark-cyan);
+}
+
+#luxury {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 0 8px 8px;
+}
+
+@media screen and (min-width: 750px) {
+  .card {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-section {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container {
+    background-color: var(--Transparent-white);
+    padding: 80px 150px;
+    height: 100vh;
+  }
+
+  .description {
+    margin-bottom: 60px;
+  }
+
+  #sedan {
+    background-color: var(--bright-orange);
+    border-radius: 8px 0px 0px 8px;
+  }
+
+  #suv {
+    background-color: var(--Dark-cyan);
+  }
+
+  #luxury {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0px 8px 8px 0px;
+  }
+}
